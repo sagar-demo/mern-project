@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400&family=Poppins:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-image: url('https://images.everydayhealth.com/images/will-smith-getting-in-the-best-shape-of-his-life-post-quarantine-badge-1440x810.jpg');
+}
+h1{
+    color: aliceblue;
+}

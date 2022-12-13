@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <title><%=title%></title>
+</head>
+<body>
+<!-- new contact us section -->
+<section class="contact">
+    <div class="content">
+        <h2>Contact-Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem atque. Nam placeat omnis a quibusdam assumenda! Voluptas, dolorum velit?</p>
+        <div>
+            <ul>
+                <%for(let i of contactpage){%>
+                    <li>
+                        
+                        <p><%=i.firstName%></p>
+                        <p><%=i.lastName%></p>
+                        <p><%=i.email_id%></p>
+                        <p><%=i.message%></p>
+                   
+                    </li>
+                    <div class="delete-button">
+                        <a href="/delete-contact/?id=<%=i._id%>"><i class="fa fa-window-close" aria-hidden="true"></i>
+                            </a>
+                    </div>
+        
+                <%}%>
+
+            </ul>
+           </div>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Philips Paradise,Nallasopara East-Mumbai<b>401209</p>
+                   </div>
+             </div>
+             <div class="box">
+                <div class="icon"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p><b>507-475-6094</p>
+                   </div>
+             </div>
+             <div class="box">
+                <div class="icon"> <i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p><b>abc@gmail.com</p>
+                   </div>
+             </div>
+        </div>
+        <!-- contactform -->
+        <div class="contactForm">
+            <form action="/contact-route"method="POST">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text"name="firstName"required>
+                    <span>FirstName</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text"name="lastName"required>
+                    <span>LastName</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email"name="email_id"required>
+                    <span>email id</span>
+                </div>
+                <div class="inputBox">
+                    <textarea name="message"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit"value="send">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+   
+</body>
+</html>
